@@ -1,0 +1,1 @@
+{"actions":[{"op":"goto","wait":"domcontentloaded"},{"as":"content","maxTokens":1500,"op":"dump"},{"as":"headings","op":"extract","selector":"h1"},{"op":"shot","out":"shots/{{slug}}.png"}]}

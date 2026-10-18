@@ -1,0 +1,5 @@
+https://example.com
+https://example.org
+{"url": "https://www.iana.org/domains/reserved", "id": "iana-reserved"}
+https://httpbin.org/html
+{"url": "https://en.wikipedia.org/wiki/Headless_browser", "id": "wiki-headless"}

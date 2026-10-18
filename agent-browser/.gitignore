@@ -1,0 +1,5 @@
+node_modules/
+*.log
+shots/*.png
+demo/shots/
+.DS_Store
