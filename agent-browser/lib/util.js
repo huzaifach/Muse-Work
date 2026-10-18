@@ -13,6 +13,14 @@ function setJsonMode(v) { jsonMode = v; }
 
 function ensureDir(d) { fs.mkdirSync(d, { recursive: true }); }
 
+// Flags that never take a value: the parser must not swallow the next
+// positional as their value (e.g. `--headed open <url>`).
+const BOOLEAN_FLAGS = new Set([
+  'json', 'headed', 'submit', 'csv', 'table', 'resume', 'foreground',
+  'all', 'clear', 'help', 'version',
+  'all-domains', 'full-page', 'respect-robots', 'wait-nav', 'new-session',
+]);
+
 function parseArgv(argv) {
   const positional = [];
   const flags = {};
@@ -27,7 +35,7 @@ function parseArgv(argv) {
       else {
         k = a.slice(2);
         const nxt = argv[i + 1];
-        if (nxt !== undefined && !nxt.startsWith('--') && !/^-.$/.test(nxt)) { v = nxt; i++; }
+        if (!BOOLEAN_FLAGS.has(k) && nxt !== undefined && !nxt.startsWith('--') && !/^-.$/.test(nxt)) { v = nxt; i++; }
         else v = true;
       }
       flags[k] = v;
@@ -144,7 +152,7 @@ async function robotsAllowed(targetUrl) {
       const t = setTimeout(() => ctrl.abort(), 8000);
       const res = await fetch(origin + '/robots.txt', {
         signal: ctrl.signal,
-        headers: { 'User-Agent': 'agent-browser/1.0 (+polite mode)' },
+        headers: { 'User-Agent': 'agent-browser/1.1 (+polite mode)' },
       });
       clearTimeout(t);
       if (res.ok) entry.rules = parseRobots(await res.text());
