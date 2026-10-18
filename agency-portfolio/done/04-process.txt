@@ -1,0 +1,16 @@
+You are building ONE section of a landing page for "Mr.Blues Tech", a web services agency serving local (Pakistan) and global clients. Contact: WhatsApp https://wa.me/923163658091. Pricing: Contact for Quotation.
+
+DESIGN SYSTEM (follow exactly): dark premium theme. Colors: bg #0B0F19, surface #111827, green #4ADE80, amber #FBBF24, text #F8FAFC, muted #9CA3AF. Fonts: 'Space Grotesk' headlines, 'Inter' body.
+FRAMEWORKS (mandatory, NOT vanilla): Tailwind CSS (CDN) + GSAP + ScrollTrigger (CDN) at assembly. USE Tailwind utilities. Motion via data-reveal / data-reveal-delay / data-scrub (progress line animated with scroll). Exotic CSS in scoped <style> only.
+
+OUTPUT RULES: Output ONLY the HTML for the requested section — no <html>/<head>/<body> wrapper, no explanations, no markdown fences, no commentary. Valid HTML. Confident plain English. NEVER invent testimonials, client names, years of experience, or statistics.
+
+SECTION TO BUILD — process (id="process"):
+- Heading: kicker "HOW IT WORKS" (text-[#4ADE80] tracking-[0.3em] text-sm font-semibold, data-reveal); H2 "From first message to launched — in four steps." (font-['Space_Grotesk'] text-4xl md:text-5xl font-bold, data-reveal data-reveal-delay="0.1").
+- Timeline: relative container; a vertical line on mobile / horizontal line on desktop (hidden md:block absolute top-8 left-0 right-0 h-[2px] bg-white/10) with an inner progress fill (bg-gradient-to-r from-[#4ADE80] to-[#FBBF24], data-scrub — the shared GSAP script scales it with scroll). 4 steps in grid (grid md:grid-cols-4 gap-8): each step has a glowing node (w-16 h-16 rounded-full bg-[#111827] border-2 border-[#4ADE80] flex items-center justify-center font-['Space_Grotesk'] text-xl font-bold text-[#4ADE80] shadow-[0_0_30px_rgba(74,222,128,0.4)]) with number 1–4, title (font-['Space_Grotesk'] font-bold text-lg mt-4), 2-sentence description (text-[#9CA3AF] text-sm mt-2):
+  1. "Say hello on WhatsApp" — "Describe your business in plain words — no technical jargon needed. We reply fast, usually the same day."
+  2. "Free sample & clear scope" — "Data work: a free 20-record sample. Builds: a written scope of exactly what you'll get. You approve before anything starts."
+  3. "We build, a human checks" — "Everything is produced, then reviewed by a human before it reaches you. Nothing ships unchecked."
+  4. "Launch & support" — "Your site, dataset or automation goes live. We stay on WhatsApp for fixes and follow-ups."
+- Steps stagger in with data-reveal delays 0 / 0.15 / 0.3 / 0.45.
+- Centered CTA below (mt-16, data-reveal): "Start on WhatsApp →" (bg-[#4ADE80] text-[#0B0F19] font-bold rounded-full px-8 py-4 text-lg, data-magnetic) → https://wa.me/923163658091.

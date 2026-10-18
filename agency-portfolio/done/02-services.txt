@@ -1,0 +1,15 @@
+You are building ONE section of a landing page for "Mr.Blues Tech", a web services agency serving local (Pakistan) and global clients. Contact: WhatsApp https://wa.me/923163658091. Pricing: Contact for Quotation.
+
+DESIGN SYSTEM (follow exactly): dark premium theme. Colors: bg #0B0F19, surface #111827, green #4ADE80, amber #FBBF24, text #F8FAFC, muted #9CA3AF. Fonts: 'Space Grotesk' headlines, 'Inter' body.
+FRAMEWORKS (mandatory, NOT vanilla): Tailwind CSS (CDN) + GSAP + ScrollTrigger (CDN) are loaded at assembly. USE Tailwind utilities for everything. Motion via data hooks: data-reveal, data-reveal-delay="0.15", data-counter + data-count, data-magnetic. Exotic CSS in a scoped <style> block only.
+
+OUTPUT RULES: Output ONLY the HTML for the requested section — no <html>/<head>/<body> wrapper, no explanations, no markdown fences, no commentary. Valid HTML. Confident plain English. NEVER invent testimonials, client names, years of experience, or statistics.
+
+SECTION TO BUILD — services (id="services"), premium cards:
+- Heading block: kicker "WHAT WE DO" (text-[#4ADE80] tracking-[0.3em] text-sm font-semibold, data-reveal); H2 "Four services. One standard: it has to work." (font-['Space_Grotesk'] text-4xl md:text-5xl font-bold, data-reveal data-reveal-delay="0.1"); muted subline "Pick one, or combine them — every project starts with a conversation." (data-reveal data-reveal-delay="0.15").
+- 4 cards in grid (grid md:grid-cols-2 xl:grid-cols-4 gap-6): each card = relative rounded-2xl p-[1px] bg-gradient-to-b from-[#4ADE80]/40 via-white/10 to-transparent (gradient border), inner div bg-[#111827]/90 backdrop-blur rounded-2xl p-8 h-full; ghost number "01"–"04" (font-['Space_Grotesk'] text-6xl font-bold text-white/5 absolute top-6 right-6); unicode icon text-4xl; title (font-['Space_Grotesk'] text-xl font-bold); 2-sentence description (text-[#9CA3AF]); 3 bullets with green ✓ (text-[#4ADE80]); "Contact for Quotation →" link (text-[#4ADE80] font-semibold hover:underline) → https://wa.me/923163658091:
+  1. "📊 Bulk Web Data Extraction" — "Structured datasets (JSON/CSV) from any website: product listings, directories, prices." Bullets: "Free 20-record sample first", "Cleaned & deduplicated data", "Respects robots.txt & rate limits".
+  2. "🚀 Landing Pages & Websites" — "Fast, mobile-first pages built to convert visitors into customers." Bullets: "Custom design, no templates", "Copy written for you", "WhatsApp & contact integration".
+  3. "🤖 Browser Automation & AI Tools" — "Repetitive web work automated; data pipelines that run on schedule." Bullets: "Built on our own agent-browser engine", "Scheduled runs, reports in your inbox", "Human-checked outputs".
+  4. "🎨 AI Content & Media" — "Words, images and short videos, finished with human taste." Bullets: "Website copy & product visuals", "Marketing creatives", "Human QA before delivery".
+- Card hover (CSS): -translate-y-2 + shadow-[0_20px_60px_-15px_rgba(74,222,128,0.3)] transition-all duration-300. Staggered entrance: data-reveal with delays 0 / 0.1 / 0.2 / 0.3.

@@ -1,0 +1,15 @@
+You are building ONE section of a landing page for "Mr.Blues Tech", a web services agency serving local (Pakistan) and global clients. Contact: WhatsApp https://wa.me/923163658091. Pricing: Contact for Quotation.
+
+DESIGN SYSTEM (follow exactly): dark premium theme. Colors: bg #0B0F19, surface #111827, green #4ADE80, amber #FBBF24, text #F8FAFC, muted #9CA3AF. Fonts: 'Space Grotesk' headlines, 'Inter' body.
+FRAMEWORKS (mandatory, NOT vanilla): Tailwind CSS (CDN) + GSAP + ScrollTrigger (CDN) at assembly. USE Tailwind utilities. Motion via data-reveal / data-reveal-delay / data-parallax="0.15" / data-magnetic. Exotic CSS in scoped <style> only.
+
+OUTPUT RULES: Output ONLY the HTML for the requested section — no <html>/<head>/<body> wrapper, no explanations, no markdown fences, no commentary. Valid HTML. Confident plain English. NEVER invent testimonials, client names, years of experience, or statistics.
+
+SECTION TO BUILD — selected work (id="work"):
+- Heading: kicker "SELECTED WORK" (text-[#4ADE80] tracking-[0.3em] text-sm font-semibold, data-reveal); H2 "Real things we've built and shipped." (font-['Space_Grotesk'] text-4xl md:text-5xl font-bold, data-reveal data-reveal-delay="0.1").
+- 4 cards in grid (grid md:grid-cols-2 gap-6): each card = group rounded-2xl overflow-hidden bg-[#111827] border border-white/10 hover:border-[#4ADE80]/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(74,222,128,0.25)]. Banner area h-48 with unique CSS gradient per card + big unicode icon (text-6xl) centered with data-parallax="0.15"; body p-6: tag chip (text-xs font-semibold tracking-wider px-3 py-1 rounded-full bg-[#4ADE80]/10 text-[#4ADE80]), title (font-['Space_Grotesk'] text-xl font-bold mt-3), one-line description (text-[#9CA3AF] mt-2), outward link (text-[#4ADE80] font-semibold mt-4 inline-block).
+  1. Banner: from-[#4ADE80]/30 to-[#0B0F19]; icon ⌨️; "agent-browser v1.1" — "Command-only headless browser CLI for AI agents — bulk automation across hundreds of URLs." Tag "AI AGENT TOOLING". Link https://github.com/huzaifach/Muse-Work/tree/master/agent-browser — "View on GitHub →".
+  2. Banner: from-[#FBBF24]/30 to-[#0B0F19]; icon 🎮; "Blob Arena" — "Fast, playable browser arena game — built and shipped live." Tag "WEB GAME". Link https://muse.ai/s/blob-arena-pu6zdxfsszpp — "Play live →".
+  3. Banner: from-[#60A5FA]/30 to-[#0B0F19]; icon 🏙️; "Skyline Stack" — "A polished stacking game with smooth physics — live in the browser." Tag "WEB GAME". Link https://muse.ai/s/skyline-stack-xuxg6zjxuxp0xkvk — "Play live →".
+  4. Banner: from-[#C084FC]/30 to-[#0B0F19]; icon 🏺; "Bazaar Siege" — "A complete strategy game set in a living bazaar — live in the browser." Tag "WEB GAME". Link https://muse.ai/s/bazaar-siege-xvxg6zjxuf8xvj5 — "Play live →".
+- Staggered entrance: data-reveal delays 0 / 0.1 / 0.2 / 0.3. Icon scales on card hover (group-hover:scale-110 transition-transform duration-300).
